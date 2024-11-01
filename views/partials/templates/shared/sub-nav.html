@@ -1,0 +1,11 @@
+<div class="pull-right" ng-if="$state.current.name == 'sites.site.accounts'">
+     <a ui-sref="sites.site.add({ slug: theStateParams.slug })" class="btn btn-default">
+     	<i class="glyphicon glyphicon-plus"></i> Add Account
+     </a>
+</div>
+
+<div class="pull-right" ng-if="$state.current.name == 'sites.site.add'">
+     <a ui-sref="sites.site.accounts({ slug: theStateParams.slug })" class="btn btn-default">
+     	<i class="glyphicon glyphicon-list-alt"></i> Current Accounts 
+     </a>
+</div>

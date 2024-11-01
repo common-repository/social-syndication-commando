@@ -1,0 +1,21 @@
+<ul class="nav nav-tabs">
+        <li ng-class="{ active:$state.includes('sites') && !$state.includes('sites.import') }">
+          <a ui-sref="sites.all"> <i class="glyphicon glyphicon-user"></i> Accounts</a>
+        </li>
+
+        <li>
+            <a  href="{{ adminUrl + '?page=sscimport' }}"> <i class="glyphicon glyphicon-upload"></i> Import Accounts </a>
+        </li>
+      
+        <li>
+          <a href="{{ adminUrl + '?page=sscqueue' }}"> <i class="glyphicon glyphicon-th-list"></i> Post Queue</a>
+        </li>
+        <li ng-class="{ active:$state.includes('settings') }">
+          <a ui-sref="settings.category.all({ category : 'general' })"> 
+          <i class="glyphicon glyphicon-tasks"></i> Settings </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="help"> <i class="glyphicon glyphicon-search"></i> Help</a>
+        </li>
+</ul>
+    

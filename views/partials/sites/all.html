@@ -1,0 +1,23 @@
+<div class="row">
+
+	<div class="col-md-6" ng-repeat="site in sites">
+		<div class="callout callout-primary callout-condensed">
+			<h4>{{ site.name }}</h4>
+			<div class="clearfix"></div>
+				<div class="pull-right">
+
+				 	<a class="btn btn-info" ui-sref="sites.site.accounts({ slug: site.slug })"> 
+				 		Accounts 
+				 		<span class="badge">{{ site.accounts_count }}</span>
+				 	</a>
+				 	
+				 	<a ui-sref="sites.site.add({ slug: site.slug })" class="btn btn-primary">Add <i class="glyphicon glyphicon-plus"></i></a>
+				 	<a href="{{ site.url }}" target="_blank" class="btn btn-default">Visit Site
+				 	<i class="glyphicon glyphicon-share-alt"></i> </a>
+			 	</div>	
+			<div class="clearfix"></div>
+		</div>
+		
+	</div>
+
+</div>

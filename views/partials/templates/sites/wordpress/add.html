@@ -1,0 +1,19 @@
+<div ng-hide="site.apiIsOk" class="callout callout-danger">
+		<strong class="text-danger">Important: </strong>
+		Make sure you have added your Wordpress APP ID and APP Secret in the plugin settings.<br/>
+		To add, First create an APP 
+		(<a href="https://developer.wordpress.com/apps/" target="_blank"> click here</a>),
+		then add the APP ID and Secret
+		(<a ui-sref="settings.category.stack.view({ category : 'apis', stack : 'wordpress' })">click here</a>);
+</div>	
+<div ng-show="site.apiIsOk" class="callout callout-warning">
+		<strong class="text-danger">Important: </strong>
+		 Make sure you have set the "Redirect URL" value in the wordpress app setting to: 
+		 
+		 <strong class="text-info">
+		 	<em>
+		 		{{ site.wpRedirectUrl }}
+		 	</em>
+		 </strong> 
+		 </div>
+	

@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1" >
+		<div class=" panel panel-default">
+			<table class="table table-striped table-condensed table-hover" style="margin-bottom:5px">
+				<thead>
+					<tr>
+						<th>Username/Identifier</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="account in site.accounts">
+						<td>{{ account.username }}</td>
+						<td> 
+						<div class="pull-right">
+							<button class="btn btn-primary btn-sm" ng-disabled="formIsPosting" ng-click="authorise(account.id)">{{ authoriseLabel(account.id) }} </button>
+							<button class="btn btn-danger btn-sm" ng-disabled="formIsPosting" ng-click="delete(account.id)">Delete </button>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+					
+				</table>
+		</div>
+	</div>
+</div>

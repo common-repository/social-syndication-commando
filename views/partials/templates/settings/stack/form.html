@@ -1,0 +1,21 @@
+
+	<form name="configFrm" novalidate class="css-form" role="form">
+	   	<fieldset class="">
+				<legend ng-bind="stack.title"></legend>
+
+				<div ng-repeat="option in stack.options">
+					<div class="form-group">
+		          		<ng-include src="optionInputTemplate(option)"></ng-include>
+		       		</div>
+		       		<div ng-bind="option.explain"></div>
+	       		</div>
+	       		<div class="bottom-note text-danger">
+	       			<em>{{ stack.body_text }}</em>
+	       		</div>
+			</fieldset>
+		<div class="col-md-12 form-group">
+			<button class="btn btn-primary pull-right" ng-disabled="$global.loading.active" ng-click="saveOptions()">	Save 
+			</button>
+		</div>
+	</form>
+

@@ -1,0 +1,34 @@
+	<div class="panel panel-default stc-stack-box">
+		<div class="panel-heading">
+			<h2 class="panel-title">
+				{{ stack.title}}
+			</h2>
+			<div class="pull-right panel-right">
+				<a ui-sref="settings.category.stack.edit({ category: category.slug, stack: stack.slug  })" class="">
+				<i class="glyphicon glyphicon-pencil"></i>	Edit
+				</a>
+			</div>
+				
+			
+			
+		</div>
+		
+		<div class="panel-body">
+			
+			<div class="option-view clearfix" ng-repeat="option in stack.options">
+				<div class="option-view-label col-md-3 col-md-offset-1">
+					{{ option.label }}
+					<div class="pull-right">:</div>
+				</div>
+				<div class="option-view-value col-md-7">
+					<span class="{{ getValueDisplayClass(option)  }}">
+						{{ option.display_value() }}
+					</span>
+					
+					<em class="text-danger" ng-show="option.display_value().length == 0">not set</em>
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>

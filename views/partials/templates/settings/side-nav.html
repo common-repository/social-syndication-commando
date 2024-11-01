@@ -1,0 +1,15 @@
+<ul class="stc-side-nav" role="tablist">
+    <li ng-class="{ active : $state.includes('settings.category', { category: category.slug}) }"  ng-repeat="category in categories">
+    <!-- <li ng-class="{{ $global.routes.isActive('settings.category',{ category: category.slug }) }}"  ng-repeat="category in categories"> -->
+        <a ui-sref="settings.category.all({ category: category.slug })">
+          {{ category.title }}
+        </a>
+        <ul>
+        <li ng-class="{ active : $state.includes('settings.category.stack', { category: category.slug, stack: stack.slug }) }" ng-repeat="stack in category.stacks">
+              <a 
+              ui-sref="settings.category.stack.view({ category: category.slug, stack: stack.slug  })">
+              &#8227;  {{ stack.title }} </a>
+            </li>
+        </ul>
+    </li>
+</ul>

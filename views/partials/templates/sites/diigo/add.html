@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-primary">
+			<div class="panel-heading"> 
+				<h3 class="panel-title">{{ site.name }}</h3>
+				<span>{{ site.description }}</span>
+			</div>
+			 <div class="panel-body">
+			 	<div class="alert alert-danger" ng-show="accountAddError" role="alert">
+			 		{{ errorMsg }}
+			 	</div>
+			 	<div class="alert alert-success" ng-show="accountAddSuccess" role="alert">
+			 		{{ successMsg }}
+			 	</div>
+				 <form name="site.accountFrm" novalidate class="css-form" role="form">
+				   
+					  <div class="form-group">
+					    <div class="input-group">
+					      <div class="input-group-addon">Username</div>
+					      <input class="form-control" ng-model="site.account.username" type="text" required placeholder="Enter username or email">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <div class="input-group">
+					      <div class="input-group-addon">Password</div>
+					      <input class="form-control" ng-model="site.account.password" type="password" required placeholder="Enter password">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					  		<button class="btn btn-primary" ng-disabled="formIsPosting" ng-click="site.verify()">Verify</button>
+					  		<img ng-show="formIsPosting" ng-src="{{ loadingSrc }}" />
+					  </div>
+				 </form>
+			 </div>
+		</div>
+	</div>
+
+</div>

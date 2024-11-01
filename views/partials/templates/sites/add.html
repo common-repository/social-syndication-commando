@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		
+		<fieldset>
+            <legend>&nbsp;</legend>
+			 <form name="site.newAccountFrm" novalidate class="css-form" role="form">
+			   
+				  <div class="form-group">
+				    <div class="input-group">
+				      <div class="input-group-addon">{{ site.usernameLabel }}</div>
+				      <input class="form-control" ng-model="site.newAccount.username" type="{{ site.usernameInput }}" required />
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <div class="input-group">
+				      <div class="input-group-addon">{{ site.passwordLabel }}</div>
+				      <input class="form-control" ng-model="site.newAccount.password" type="{{ site.passwordInput }}" required />
+				    </div>
+				  </div>
+
+				  <div class="form-group pull-right">
+				  		<button class="btn btn-primary" ng-disabled="somthingIsLoading" ng-click="site.verify()">Verify</button>
+				  </div>
+			 </form>
+		</fieldset>
+	</div>
+
+</div>
